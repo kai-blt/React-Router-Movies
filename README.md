@@ -40,8 +40,8 @@ Once you are done your application will have two routes:
 
 * [x] When a user clicks on the movie card inside `MovieList` they should be taken to `/movies/{id of clicked movie here}` to see the details of the selected movie.
 * [x] You will need to modify line 7 of `Movie.js` to get the id of the selected movie from the URL.
-* [ ] Add functionality so the `Home` button on the `SavedList` component navigates back to home.
-* [ ] You should now be able to navigate back and forth between the list of movies and the detailed view of a single movie.
+* [x] Add functionality so the `Home` button on the `SavedList` component navigates back to home.
+* [x] You should now be able to navigate back and forth between the list of movies and the detailed view of a single movie.
 
 ### Task 3: Stretch Goals
 
@@ -49,9 +49,9 @@ If you have completed Parts 1 & 2 feel free to move on to these stretch goals.
 
 #### Refactor so that our code is DRY
 
-* [ ] You may notice that we are using very similar JSX in the `Movie` component and in the `MovieDetails` component in `MovieList.js`. The main difference is the list of stars, which only exists in the "detailed" view of the `Movie` component.
-* [ ] Create a new component in `MovieCard.js` that returns a Movie Card. Then remove the old code from `Movie` and `MovieDetails` and instead return the new `MovieCard` component.
-* [ ] The Movie Card should be flexible enough to handle displaying a movie with or without the list of stars.
+* [x] You may notice that we are using very similar JSX in the `Movie` component and in the `MovieDetails` component in `MovieList.js`. The main difference is the list of stars, which only exists in the "detailed" view of the `Movie` component.
+* [x] Create a new component in `MovieCard.js` that returns a Movie Card. Then remove the old code from `Movie` and `MovieDetails` and instead return the new `MovieCard` component.
+* [x] The Movie Card should be flexible enough to handle displaying a movie with or without the list of stars.
 
 #### Add `Save Movie` functionality
 
