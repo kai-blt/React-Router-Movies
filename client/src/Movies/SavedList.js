@@ -11,7 +11,7 @@ export default function SavedList(props) {
       {props.list.map(movie => (
         <span className="saved-movie">{movie.title}</span>
       ))}
-      <div className="home-button" onClick={() => history.goBack()}>Home</div>
+      <div className="home-button" onClick={() => history.push('/')}>Home</div>
     </div>
   );
 }
