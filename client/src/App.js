@@ -32,13 +32,14 @@ export default function App () {
     /*Remove duplicates by creating a new set. Sets don't allow duplicates!
     Spread the current saved array and append the clicked on id. Convert
     the set back into an array for later use!*/
-    
-    setSaved(Array.from(new Set([...saved, Number(id)])));
+    setSaved(Array.from(
+      new Set([...saved, movieList.find(movie => movie.id === Number(id))])
+    ));
   };
 
   return (
     <div>
-      <SavedList list={[ /* This is stretch */]} />
+      <SavedList list={saved} />
       <div>
         <Switch>
           <Route path='/movies/:id'>
