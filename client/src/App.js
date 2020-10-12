@@ -25,8 +25,15 @@ export default function App () {
     getMovies();
   }, []);
 
+  
   const addToSavedList = id => {
     // This is stretch. Prevent the same movie from being "saved" more than once
+
+    /*Remove duplicates by creating a new set. Sets don't allow duplicates!
+    Spread the current saved array and append the clicked on id. Convert
+    the set back into an array for later use!*/
+    
+    setSaved(Array.from(new Set([...saved, Number(id)])));
   };
 
   return (
@@ -35,7 +42,7 @@ export default function App () {
       <div>
         <Switch>
           <Route path='/movies/:id'>
-            <Movie />
+            <Movie saveMovie={addToSavedList}/>
           </Route>
           
           <Route path='/'>

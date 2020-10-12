@@ -5,7 +5,7 @@ import MovieCard from './MovieCard'
 
 export default function Movie(props) {
   const [movie, setMovie] = useState();
-
+  const { saveMovie  } = props;
   const { id } = useParams();
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
@@ -39,7 +39,7 @@ export default function Movie(props) {
       <div className="movie-card">
         <MovieCard title={title} director={director} metascore={metascore} stars={stars}/>       
       </div>
-      <div className="save-button">Save</div>
+      <div className="save-button" onClick={() => saveMovie(id)}>Save</div>
     </div>
   );
 }
